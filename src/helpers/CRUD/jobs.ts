@@ -72,3 +72,13 @@ function filterJobs({
   }
   return filteredJobs;
 }
+
+export async function getJobById(id: string): Promise<Job | null> {
+  try {
+    const job = jobs.find((job) => job.id === id) as Job | undefined;
+    return job || null;
+  } catch (error) {
+    console.error("Database Error:", error);
+    throw new Error("Failed to fetch job by ID");
+  }
+}

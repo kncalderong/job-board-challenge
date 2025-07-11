@@ -5,11 +5,11 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import jobs from "@/lib/jobs.json";
 const addSchema = z.object({
-  title: z.string().min(1),
+  title: z.string().min(3),
   company: z.string().min(1),
   location: z.string().min(1),
   type: z.enum(["Full-time", "Contract", "Part-time"]),
-  description: z.string().min(1),
+  description: z.string().min(10),
 });
 
 export async function addJobAction(prevState: unknown, formData: FormData) {

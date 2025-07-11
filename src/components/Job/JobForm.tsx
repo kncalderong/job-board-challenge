@@ -23,8 +23,6 @@ export function JobForm({ job }: { job?: Job | null }) {
     job == null ? addJobAction : updateJobAction.bind(null, job.id),
     {}
   );
-
-  console.log("JobForm error:", error);
   return (
     <form action={action} className="space-y-8">
       <div className="space-y-2">
