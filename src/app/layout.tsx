@@ -15,13 +15,17 @@ const outfit = Outfit({
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={outfit.className}>
       <body className="w-full bg-dark-blue text-white flex flex-col lg:flex-row min-h-screen">
         <Navbar />
+        <div id="parallel-modal-root" />
+        {modal}
         <main className="grow">{children}</main>
       </body>
     </html>
