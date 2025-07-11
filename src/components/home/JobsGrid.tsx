@@ -12,17 +12,20 @@ export default async function JobsGrid({
   pageSize,
   query,
   jobType,
+  remoteOnly,
 }: {
   currentPage: number;
   pageSize: number;
   query?: string;
   jobType?: string;
+  remoteOnly?: boolean;
 }) {
   const jobs = await getJobs({
     pageSize,
     page: currentPage,
     query: query || "",
     jobType: jobType || "",
+    remoteOnly: remoteOnly || false,
   });
   return (
     <section className="flex flex-col gap-6 my-4">

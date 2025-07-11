@@ -9,11 +9,13 @@ export default async function Home(props: {
     page?: string;
     query?: string;
     type?: string;
+    remote?: string;
   }>;
 }) {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || "";
   const jobType = searchParams?.type || "";
+  const remoteOnly = searchParams?.remote === "true";
 
   const PAGE_SIZE = 6;
   const currentPage = Number(searchParams?.page) || 1;
@@ -21,6 +23,7 @@ export default async function Home(props: {
     pageSize: PAGE_SIZE,
     query,
     jobType,
+    remoteOnly,
   });
 
   return (
@@ -35,6 +38,7 @@ export default async function Home(props: {
           pageSize={PAGE_SIZE}
           query={query}
           jobType={jobType}
+          remoteOnly={remoteOnly}
         />
       </Suspense>
       <PaginationBlock totalPages={totalPages} />

@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { Checkbox } from "../ui/checkbox";
 
 export default function SearchBlock({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
@@ -29,20 +30,20 @@ export default function SearchBlock({ placeholder }: { placeholder: string }) {
     replace(`${pathname}?${params.toString()}`);
   }, 300);
 
-  const handleFilterChange = (value: string) => {
+  const handleFilterChange = (value: string, key: string) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", "1");
     if (value && value !== "all") {
-      params.set("type", value);
+      params.set(key, value);
     } else {
-      params.delete("type");
+      params.delete(key);
     }
     replace(`${pathname}?${params.toString()}`);
   };
 
   return (
-    <section className="w-full grid grid-cols-1 grid-flow-row md:grid-cols-2 gap-4">
-      <div className="flex w-full items-center justify-center gap-4 md:gap-6 md:col-span-2 ">
+    <section className="w-full grid grid-cols-1 grid-flow-row gap-4 p-4 rounded-lg border border-greyish-blue md:grid-cols-2 lg:grid-cols-4 lg:py-0">
+      <div className="flex w-full items-center justify-center gap-4 md:gap-6 md:col-span-2 lg:py-4 lg:border-r border-greyish-blue">
         <label htmlFor="search" className="sr-only">
           Search
         </label>
@@ -57,16 +58,16 @@ export default function SearchBlock({ placeholder }: { placeholder: string }) {
           defaultValue={searchParams.get("query") || ""}
         />
       </div>
-      <div className="flex w-full items-center  gap-4 md:gap-6">
+      <div className="flex w-full items-center  gap-4 md:gap-6 lg:py-4 lg:border-r border-greyish-blue">
         <label htmlFor="filter-by-type" className="sr-only">
           Filter By Job Type
         </label>
         <Funnel />
         <Select
-          onValueChange={handleFilterChange}
+          onValueChange={(value) => handleFilterChange(value, "type")}
           defaultValue={searchParams.get("type") || ""}
         >
-          <SelectTrigger className="w-full border-none">
+          <SelectTrigger className="w-full border-none cursor-pointer">
             <SelectValue className="" placeholder="Filter By Type..." />
           </SelectTrigger>
           <SelectContent>
@@ -82,7 +83,17 @@ export default function SearchBlock({ placeholder }: { placeholder: string }) {
           </SelectContent>
         </Select>
       </div>
-      <div></div>
+      <div className="flex w-full items-center gap-4 cursor-pointer md:gap-6 lg:py-4">
+        <Checkbox
+          id="terms"
+          onCheckedChange={(value) => handleFilterChange(`${value}`, "remote")}
+          className="cursor-pointer"
+          defaultChecked={searchParams.get("remote") === "true"}
+        />
+        <label htmlFor="terms" className="cursor-pointer">
+          Remote Only
+        </label>
+      </div>
     </section>
   );
 }

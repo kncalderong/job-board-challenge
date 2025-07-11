@@ -6,14 +6,16 @@ export async function getTotalPages({
   pageSize,
   query,
   jobType,
+  remoteOnly,
 }: {
   pageSize: number;
   query: string;
   jobType?: string;
+  remoteOnly?: boolean;
 }): Promise<number> {
   try {
     if (pageSize === 0) return 0;
-    const filteredJobs = filterJobs({ query, jobType });
+    const filteredJobs = filterJobs({ query, jobType, remoteOnly });
     return Math.ceil(filteredJobs.length / pageSize);
   } catch (error) {
     console.error("Database Error:", error);
@@ -26,15 +28,17 @@ export async function getJobs({
   page,
   query,
   jobType,
+  remoteOnly,
 }: {
   pageSize: number;
   page: number;
   query: string;
   jobType?: string;
+  remoteOnly?: boolean;
 }) {
   try {
     if (pageSize === 0 || page < 1) return [];
-    const filteredJobs = filterJobs({ query, jobType });
+    const filteredJobs = filterJobs({ query, jobType, remoteOnly });
     return filteredJobs.slice((page - 1) * pageSize, page * pageSize);
   } catch (error) {
     console.error("Database Error:", error);
@@ -42,7 +46,15 @@ export async function getJobs({
   }
 }
 
-function filterJobs({ query, jobType }: { query?: string; jobType?: string }) {
+function filterJobs({
+  query,
+  jobType,
+  remoteOnly,
+}: {
+  query?: string;
+  jobType?: string;
+  remoteOnly?: boolean;
+}) {
   const typedJobs = jobs as Job[];
   let filteredJobs = typedJobs;
   if (query) {
@@ -54,6 +66,9 @@ function filterJobs({ query, jobType }: { query?: string; jobType?: string }) {
   }
   if (jobType) {
     filteredJobs = filteredJobs.filter((job) => job.type === jobType);
+  }
+  if (remoteOnly) {
+    filteredJobs = filteredJobs.filter((job) => job.location === "Remote");
   }
   return filteredJobs;
 }
