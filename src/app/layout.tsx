@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navigation/Navbar";
 
 export const metadata: Metadata = {
   title: "Job Board",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={outfit.className}>
-      <body>{children}</body>
+      <body className="w-full bg-dark-blue text-white flex flex-col lg:flex-row min-h-screen">
+        <Navbar />
+        <main className="grow">{children}</main>
+      </body>
     </html>
   );
 }
