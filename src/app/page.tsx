@@ -1,3 +1,9 @@
+import JobsGrid from "@/components/home/JobsGrid";
+
 export default function Home() {
-  return <div>hello hello</div>;
+  return (
+    <div className="custom-box">
+      <JobsGrid />
+    </div>
+  );
 }

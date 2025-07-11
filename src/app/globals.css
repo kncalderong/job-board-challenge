@@ -9,6 +9,7 @@
   --color-dark-blue: #10141e;
   --color-greyish-blue: #5a698f;
   --color-gray: #c2c8d1;
+  --color-light-blue: #98c6fc;
 }
 
 @theme inline {
@@ -124,5 +125,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .custom-box {
+    @apply w-10/12 mx-auto md:w-11/12 xl:max-w-[1110px] 2xl:max-w-[1280px];
   }
 }

@@ -7,8 +7,8 @@ import AvatarImg from "@/assets/images/image-avatar.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-dark-blue text-gray w-full lg:w-[156px] lg:p-7">
-      <div className="flex bg-semi-dark-blue px-6 items-center min-h-[90px] lg:rounded-[20px] lg:p-8 lg:flex-col lg:h-[calc(100vh-60px)] lg:gap-6">
+    <nav className="bg-dark-blue relative text-gray w-full lg:w-[156px] ">
+      <div className="flex bg-semi-dark-blue px-6 items-center min-h-[90px] lg:rounded-[20px] lg:p-8 lg:flex-col lg:h-[calc(100vh-60px)] lg:gap-6 lg:fixed lg:w-[105px] lg:top-7 lg:left-7">
         <MobileSidebar>
           <NavLinks />
         </MobileSidebar>
