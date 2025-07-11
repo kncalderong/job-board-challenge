@@ -30,7 +30,7 @@ export default function PaginationBlock({
   const allPages = generatePagination(currentPage, totalPages);
 
   return (
-    <Pagination className="lg:mt-12">
+    <Pagination className="">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious

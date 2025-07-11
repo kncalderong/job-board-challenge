@@ -10,13 +10,19 @@ import {
 export default async function JobsGrid({
   currentPage,
   pageSize,
+  query,
 }: {
   currentPage: number;
   pageSize: number;
+  query?: string;
 }) {
-  const jobs = await getJobs(pageSize, currentPage);
+  const jobs = await getJobs({
+    pageSize,
+    page: currentPage,
+    query: query || "",
+  });
   return (
-    <section className="flex flex-col gap-6 my-12">
+    <section className="flex flex-col gap-6 my-4">
       {jobs.map((job) => (
         <div
           key={job.id}
