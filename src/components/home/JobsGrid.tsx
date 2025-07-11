@@ -1,5 +1,4 @@
-import jobs from "@/lib/jobs.json";
-import { Job } from "@/types/jobs";
+import { getJobs } from "@/helpers/CRUD/jobs";
 import {
   ClockFading,
   ClockPlus,
@@ -8,13 +7,17 @@ import {
   ReceiptText,
 } from "lucide-react";
 
-export default async function JobsGrid() {
-  const typedJobs = jobs as Job[];
-
-  const filteredJobs = typedJobs.slice(0, 10);
+export default async function JobsGrid({
+  currentPage,
+  pageSize,
+}: {
+  currentPage: number;
+  pageSize: number;
+}) {
+  const jobs = await getJobs(pageSize, currentPage);
   return (
     <section className="flex flex-col gap-6 my-12">
-      {filteredJobs.map((job) => (
+      {jobs.map((job) => (
         <div
           key={job.id}
           className="grid grid-cols-1 grid-flow-row gap-2 rounded-lg bg-semi-dark-blue p-4 md:grid-cols-3 "
@@ -55,6 +58,19 @@ export default async function JobsGrid() {
             )}
           </div>
         </div>
+      ))}
+    </section>
+  );
+}
+
+export function JobsGridSkeleton({ pageSize }: { pageSize: number }) {
+  return (
+    <section className="flex flex-col gap-6 my-12">
+      {Array.from({ length: pageSize }).map((_, index) => (
+        <div
+          key={index}
+          className="grid grid-cols-1 grid-flow-row gap-2 rounded-lg bg-semi-dark-blue p-4 md:grid-cols-3 "
+        ></div>
       ))}
     </section>
   );
