@@ -8,13 +8,20 @@ export default async function Home(props: {
   searchParams?: Promise<{
     page?: string;
     query?: string;
+    type?: string;
   }>;
 }) {
-  const PAGE_SIZE = 6;
   const searchParams = await props.searchParams;
-  const currentPage = Number(searchParams?.page) || 1;
   const query = searchParams?.query || "";
-  const totalPages = await getTotalPages(PAGE_SIZE, query);
+  const jobType = searchParams?.type || "";
+
+  const PAGE_SIZE = 6;
+  const currentPage = Number(searchParams?.page) || 1;
+  const totalPages = await getTotalPages({
+    pageSize: PAGE_SIZE,
+    query,
+    jobType,
+  });
 
   return (
     <div className="custom-box flex flex-col gap-8 py-8">
@@ -27,6 +34,7 @@ export default async function Home(props: {
           currentPage={currentPage}
           pageSize={PAGE_SIZE}
           query={query}
+          jobType={jobType}
         />
       </Suspense>
       <PaginationBlock totalPages={totalPages} />
