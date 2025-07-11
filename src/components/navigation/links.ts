@@ -1,10 +1,4 @@
-import {
-  CpuIcon,
-  EarthIcon,
-  HeartPulseIcon,
-  HomeIcon,
-  LucideIcon,
-} from "lucide-react";
+import { HomeIcon, LucideIcon, PlusIcon } from "lucide-react";
 
 export type NavLinkType = {
   id: number;
@@ -15,9 +9,7 @@ export type NavLinkType = {
 
 const links: NavLinkType[] = [
   { id: 1, text: "home", path: "/", icon: HomeIcon },
-  { id: 3, text: "technology", path: "/technology", icon: CpuIcon },
-  { id: 4, text: "health", path: "/health", icon: HeartPulseIcon },
-  { id: 2, text: "public", path: "/public", icon: EarthIcon },
+  { id: 3, text: "Post Job", path: "/create", icon: PlusIcon },
 ];
 
 export default links;

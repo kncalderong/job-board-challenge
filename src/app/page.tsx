@@ -28,7 +28,7 @@ export default async function Home(props: {
 
   return (
     <div className="custom-box flex flex-col gap-8 py-8">
-      <SearchBlock placeholder="Search by name or author" />
+      <SearchBlock placeholder="Search by title or company" />
       <Suspense
         key={currentPage + PAGE_SIZE}
         fallback={<JobsGridSkeleton pageSize={PAGE_SIZE} />}
