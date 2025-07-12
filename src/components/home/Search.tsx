@@ -53,7 +53,7 @@ export default function SearchBlock({ placeholder }: { placeholder: string }) {
           onChange={(e) => {
             handleSearch(e.target.value);
           }}
-          className="min-h-[24px] bg-dark-blue text-white flex-grow focus-visible:bg-dark-blue focus-visible:border-b-[1px] focus-visible:border-b-greyish-blue caret-red focus-visible:outline-none cursor-pointer text-base md:text-2xl"
+          className="min-h-[24px] bg-dark-blue mr-4 text-white flex-grow focus-visible:bg-dark-blue focus-visible:border-b-[1px] focus-visible:border-b-greyish-blue caret-red focus-visible:outline-none cursor-pointer text-base md:text-2xl "
           placeholder={placeholder}
           defaultValue={searchParams.get("query") || ""}
         />
