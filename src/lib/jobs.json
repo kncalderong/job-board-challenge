@@ -1,0 +1,242 @@
+[
+  {
+    "id": "job-001",
+    "title": "Frontend Developer",
+    "company": "TechCorp",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Join our fast-paced team to build modern web experiences."
+  },
+  {
+    "id": "job-002",
+    "title": "UI/UX Designer",
+    "company": "Creative Inc.",
+    "location": "New York, NY",
+    "type": "Contract",
+    "description": "Design user-first interfaces for our SaaS products."
+  },
+  {
+    "id": "job-003",
+    "title": "Backend Developer",
+    "company": "DataWorks",
+    "location": "San Francisco, CA",
+    "type": "Full-time",
+    "description": "Develop robust APIs and manage scalable databases."
+  },
+  {
+    "id": "job-004",
+    "title": "DevOps Engineer",
+    "company": "Cloudify",
+    "location": "Austin, TX",
+    "type": "Full-time",
+    "description": "Automate deployments and maintain CI/CD pipelines."
+  },
+  {
+    "id": "job-005",
+    "title": "Product Manager",
+    "company": "InnovaTech",
+    "location": "Remote",
+    "type": "Part-time",
+    "description": "Lead product strategy and collaborate with cross-functional teams."
+  },
+  {
+    "id": "job-006",
+    "title": "QA Tester",
+    "company": "TestLab",
+    "location": "Boston, MA",
+    "type": "Contract",
+    "description": "Execute test plans and report bugs to ensure product quality."
+  },
+  {
+    "id": "job-007",
+    "title": "Data Analyst",
+    "company": "Insight Analytics",
+    "location": "Chicago, IL",
+    "type": "Full-time",
+    "description": "Analyze data sets and create actionable reports for stakeholders."
+  },
+  {
+    "id": "job-008",
+    "title": "Mobile App Developer",
+    "company": "Appify",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Build high-performance mobile applications for iOS and Android."
+  },
+  {
+    "id": "job-009",
+    "title": "Marketing Specialist",
+    "company": "BrandHive",
+    "location": "Los Angeles, CA",
+    "type": "Full-time",
+    "description": "Develop and execute digital marketing campaigns."
+  },
+  {
+    "id": "job-010",
+    "title": "Content Writer",
+    "company": "WriteNow",
+    "location": "Remote",
+    "type": "Part-time",
+    "description": "Create engaging content for blogs, newsletters, and social media."
+  },
+  {
+    "id": "job-011",
+    "title": "Full Stack Developer",
+    "company": "StackSolutions",
+    "location": "Seattle, WA",
+    "type": "Full-time",
+    "description": "Work across frontend and backend to deliver complete solutions."
+  },
+  {
+    "id": "job-012",
+    "title": "Graphic Designer",
+    "company": "PixelPerfect",
+    "location": "Miami, FL",
+    "type": "Contract",
+    "description": "Design visuals for web, print, and social media campaigns."
+  },
+  {
+    "id": "job-013",
+    "title": "Machine Learning Engineer",
+    "company": "AI Labs",
+    "location": "San Jose, CA",
+    "type": "Full-time",
+    "description": "Develop and optimize machine learning models for real-world applications."
+  },
+  {
+    "id": "job-014",
+    "title": "Technical Writer",
+    "company": "DocuWorks",
+    "location": "Denver, CO",
+    "type": "Part-time",
+    "description": "Create and maintain technical documentation and guides."
+  },
+  {
+    "id": "job-015",
+    "title": "HR Coordinator",
+    "company": "PeopleFirst",
+    "location": "Atlanta, GA",
+    "type": "Full-time",
+    "description": "Coordinate HR processes and support employee engagement."
+  },
+  {
+    "id": "job-016",
+    "title": "Customer Support Specialist",
+    "company": "HelpDeskPro",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Assist customers by resolving issues and answering questions."
+  },
+  {
+    "id": "job-017",
+    "title": "Business Analyst",
+    "company": "BizInsight",
+    "location": "Philadelphia, PA",
+    "type": "Contract",
+    "description": "Analyze business processes and recommend improvements."
+  },
+  {
+    "id": "job-018",
+    "title": "IT Support Technician",
+    "company": "SupportNow",
+    "location": "Dallas, TX",
+    "type": "Full-time",
+    "description": "Provide technical support to end users and maintain systems."
+  },
+  {
+    "id": "job-019",
+    "title": "SEO Specialist",
+    "company": "RankBoost",
+    "location": "Remote",
+    "type": "Part-time",
+    "description": "Optimize website content and strategy to improve search rankings."
+  },
+  {
+    "id": "job-020",
+    "title": "Social Media Manager",
+    "company": "Socially",
+    "location": "Portland, OR",
+    "type": "Full-time",
+    "description": "Manage social media accounts and create engaging content."
+  },
+  {
+    "id": "job-021",
+    "title": "Data Engineer",
+    "company": "BigDataCorp",
+    "location": "San Francisco, CA",
+    "type": "Full-time",
+    "description": "Build and maintain scalable data pipelines and infrastructure."
+  },
+  {
+    "id": "job-022",
+    "title": "Project Manager",
+    "company": "PlanIt",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Oversee projects from initiation to delivery, ensuring timelines are met."
+  },
+  {
+    "id": "job-023",
+    "title": "Cybersecurity Analyst",
+    "company": "SecureNet",
+    "location": "Washington, DC",
+    "type": "Full-time",
+    "description": "Monitor and secure network systems against threats."
+  },
+  {
+    "id": "job-024",
+    "title": "Cloud Solutions Architect",
+    "company": "SkyTech",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Design and implement cloud infrastructure and solutions."
+  },
+  {
+    "id": "job-025",
+    "title": "Sales Representative",
+    "company": "MarketMax",
+    "location": "Phoenix, AZ",
+    "type": "Full-time",
+    "description": "Build client relationships and achieve sales targets."
+  },
+  {
+    "id": "job-026",
+    "title": "Video Editor",
+    "company": "MediaHouse",
+    "location": "Remote",
+    "type": "Contract",
+    "description": "Edit and produce video content for digital platforms."
+  },
+  {
+    "id": "job-027",
+    "title": "System Administrator",
+    "company": "NetSystems",
+    "location": "Houston, TX",
+    "type": "Full-time",
+    "description": "Manage and maintain network and server infrastructure."
+  },
+  {
+    "id": "job-028",
+    "title": "Recruiter",
+    "company": "TalentHub",
+    "location": "Nashville, TN",
+    "type": "Part-time",
+    "description": "Identify and engage top talent for open positions."
+  },
+  {
+    "id": "job-029",
+    "title": "Operations Manager",
+    "company": "OpsWorks",
+    "location": "Detroit, MI",
+    "type": "Full-time",
+    "description": "Oversee daily operations to ensure efficiency and quality."
+  },
+  {
+    "id": "job-030",
+    "title": "AI Product Owner",
+    "company": "CognitiveTech",
+    "location": "Remote",
+    "type": "Full-time",
+    "description": "Define vision and roadmap for AI-powered products."
+  }
+]
